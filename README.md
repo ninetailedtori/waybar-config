@@ -23,3 +23,10 @@ My personal Waybar config!
 4. Copy the .local/share/bin files to your .local/share/bin directory.
 5. Run `chmod +x ~/.local/share/bin/*`, to allow execution of all the scripts in the directory.
 6. Restart waybar and enjoy!
+
+## Thanks to:
+- Hyprdots, which provided the basis for some of the scripts I've used!
+- sway, swaync, swayosd, which provided a lot of modular functionality behind IPC and notifiers for this project
+- waybar itself, which provided a decent chunk of default scripts for custom modules, which I have customised here.
+- Nerd Fonts, which provided a lovely patched font I've used to the fullest here :]
+- And lastly, everyone here who's using my config! Thank you for sticking around <3
