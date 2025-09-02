@@ -1,6 +1,8 @@
 # waybar-config
 My personal Waybar config!
 
+![preview](https://github.com/ninetailedtori/waybar-config/blob/main/assets/waybar-config.png?raw=true "Preview of my waybar config.")
+
 ## Dependencies
 - blueman-manager: for bluetooth support.
 - pipewire, pipewire-pulse, wireplumber: for cava and volume control support.
