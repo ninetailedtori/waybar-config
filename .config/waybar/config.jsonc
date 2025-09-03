@@ -1,20 +1,13 @@
 // This is a generic waybar config! I don't use it as much :)
 {
-    "layer": "overlay", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "width": 1280, // Waybar width
+    "layer": "overlay",     // Waybar at top layer
+    "position": "bottom",   // Waybar position (top|bottom|left|right)
+    // "width": 1280,       // Waybar width
+    
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "wlr/taskbar", "sway/window"],
+    "modules-left": [],
     "modules-center": ["custom/music", "clock"],
-    "modules-right": ["pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
-    "sway/workspaces": {
-         "disable-scroll": true,
-         "sort-by-name": true,
-         "format": " {icon} ",
-         "format-icons": {
-             "default": "",
-         },
-     },
+    "modules-right": ["pulseaudio", "clock", "tray", "custom/power"],
     "tray": {
         "icon-size": 21,
         "spacing": 10
@@ -41,11 +34,6 @@
             "default": ["", "", " "]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/lock": {
-        "tooltip": false,
-        "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
-        "format": "",
     },
     "custom/power": {
         "tooltip": false,
