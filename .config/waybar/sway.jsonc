@@ -1,10 +1,10 @@
-// This is my current sway config! I like this most :]                                                                                   │
-// Below is the .config/sway/config snippet for this bar to support IPC.                                                                 │
-//                                                                                                                                       │
-//bar {                                                                                                                                  │
-//    swaybar_command "/usr/bin/waybar -c /home/madeline/.config/waybar/sway.jsonc"                                                      │
-//    position bottom                                                                                                                    │
-//    mode dock                                                                                                                          │
+// This is my current sway config! I like this most :]
+// Below is the .config/sway/config snippet for this bar to support IPC.
+//
+//bar {
+//    swaybar_command "/usr/bin/waybar -c /home/madeline/.config/waybar/sway.jsonc"
+//    position bottom
+//    mode dock
 //}
 {
 	"exclusive": true,
@@ -18,7 +18,7 @@
 	"passthrough": false,
 	"position": "bottom",
 	"reload_style_on_change": true,
-	// "width": 1280, // Waybar width
+
 	"modules-left": ["sway/workspaces", "user", "wlr/taskbar", "sway/window"],
 	"modules-center": [
 		"cpu",
@@ -48,6 +48,7 @@
 		"custom/lock",
 		"custom/power"
 	],
+
 	"bluetooth": {
 		"format": "󰂯 {status}",
 		"format-disabled": "󰂲 ",

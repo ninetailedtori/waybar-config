@@ -1,12 +1,12 @@
-// This is a sway.jsonc config with IPC support for auto-hiding your waybar!                                                             ║
-// The .config/sway/config snippets to support IPC is as such.                                                                           ║
-//                                                                                                                                       ║
-//bar {                                                                                                                                  ║
-//    swaybar_command "/usr/bin/waybar -c /home/madeline/.config/waybar/sway-hide.jsonc"                                                 ║
-//    position top                                                                                                                       ║
-//    hidden_state hide                                                                                                                  ║
-//    mode hide                                                                                                                          ║
-//    modifier Mod4                                                                                                                      ║
+// This is a sway.jsonc config with IPC support for auto-hiding your waybar!
+// The .config/sway/config snippets to support IPC is as such.
+//
+//bar {
+//    swaybar_command "/usr/bin/waybar -c /home/madeline/.config/waybar/sway-hide.jsonc"
+//    position top
+//    hidden_state hide
+//    mode hide
+//    modifier Mod4
 //}
 {
 	"exclusive": true,
@@ -22,7 +22,7 @@
 	"position": "top",
 	"reload_style_on_change": true,
 	"start-hidden": true,
-	// "width": 1280, // Waybar width
+
 	"modules-left": ["sway/workspaces", "user", "wlr/taskbar", "sway/window"],
 	"modules-center": [
 		"cpu",
@@ -50,6 +50,7 @@
 		"custom/lock",
 		"custom/power"
 	],
+
 	"bluetooth": {
 		"format": "󰂯 {status}",
 		"format-disabled": "󰂲 ",
