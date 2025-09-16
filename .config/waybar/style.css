@@ -10,7 +10,6 @@
 
 #waybar {
 	background: rgba(36, 39, 58, 0.9);
-
 	color: @text;
 
 	border: 2px solid @overlay0;
@@ -133,6 +132,7 @@ tooltip {
 
 #user {
 	color: @rosewater;
+	margin-left: 8px;
 }
 
 #workspaces {
@@ -265,4 +265,5 @@ tooltip {
 
 #custom-power {
 	color: @lavender;
+	margin-right: 8px;
 }
