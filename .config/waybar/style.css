@@ -2,204 +2,267 @@
 
 * {
 	font-family: JetBrainsMono Nerd Font;
-    font-weight: 800;
+	font-weight: 800;
 	font-size: 11px;
 	min-height: 0px;
+	border-radius: 5px;
 }
 
 #waybar {
-	background: rgba(36, 39, 58, 0.98);
-	/* 	backdrop-filter: blur(5px); */
+	background: rgba(36, 39, 58, 0.9);
+
 	color: @text;
+
+	border: 2px solid @overlay0;
+
+	/* 	backdrop-filter: blur(5px); */
 }
 
 tooltip {
-	background: rgba(147, 154, 183, 0.2);
-	border: 1px solid rgb(183, 189, 248);
+	background-color: rgba(147, 154, 183, 0.2);
+
 	color: @text;
+
+	border: 2px solid @lavender;
 }
 
-#workspaces {
-	margin: 8px;
-	border-radius: 5px;
-}
-
-#workspaces button {
-	/* background-color: rgba(54, 58, 79, 0.5); */
-	padding: 0px 5px 0px 8px;
-}
-
-#workspaces button:hover {
-	background-color: rgba(183, 189, 248, 0.8);
-}
-
-#workspaces button.active {
-	background-color: rgba(110, 115, 141, 0.8);
-}
-
-#taskbar {
-	margin: 8px;
-	border-radius: 5px;
-}
-
-#taskbar button {
-	padding: 0px 7px;
-}
-
-#backlight,
-#battery,
-#bluetooth,
+/* Fully bordered modules */
 #clock,
+#custom-eyes,
+#custom-pacman,
+#custom-updates,
+#gamemode,
+#user,
+#systemd-failed-units {
+	background-color: rgba(54, 58, 79, 0.95);
+
+	border: 2px solid @overlay0;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+	margin-right: 4px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Top-Bottom-bordered modules */
+#bluetooth,
 #cava,
-#cpu,
 #custom-cpuinfo,
 #custom-brightness,
 #custom-gpuinfo,
-#custom-eyes,
 #custom-lock,
-#custom-music,
-#custom-notifications,
-#custom-pacman,
-#custom-power,
-#custom-updates,
-#custom-weather,
-#disk,
-#gamemode,
 #idle_inhibitor,
 #language,
 #memory,
-#network,
 #pulseaudio,
-#privacy,
-#tray,
-#user,
-#systemd-failed-units {
-	background-color: @surface0;
-	padding: 10px 10px;
-	margin: 8px 0;
+#privacy {
+	background-color: rgba(54, 58, 79, 0.95);
+
+	border-top: 2px solid @overlay0;
+	border-bottom: 2px solid @overlay0;
+	border-left: 0px;
+	border-right: 0px;
+
+	border-radius: 0px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Left-bordered modules */
+#cpu,
+#custom-music,
+#network,
+#tray {
+	background-color: rgba(54, 58, 79, 0.95);
+
+	border-top: 2px solid @overlay0;
+	border-bottom: 2px solid @overlay0;
+	border-left: 2px solid @overlay0;
+	border-right: 0px;
+
+	border-radius: 5px 0px 0px 5px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+	margin-right: 0px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Right-bordered modules */
+#custom-notifications,
+#custom-power,
+#custom-weather,
+#disk {
+	background-color: rgba(54, 58, 79, 0.95);
+
+	border-top: 2px solid @overlay0;
+	border-bottom: 2px solid @overlay0;
+	border-right: 2px solid @overlay0;
+	border-left: 0px;
+
+	border-radius: 0px 5px 5px 0px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 4px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #user {
-	color: @flamingo;
-	border-radius: 5px;
+	color: @rosewater;
 }
 
-#language {
-	color: @sapphire;
-	border-radius: 0px;
+#workspaces {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+#workspaces button {
+	color: @flamingo;
+
+	margin-left: 0px;
+	margin-right: 5px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#workspaces button:hover {
+	background-color: rgba(147, 154, 183, 0.2);
+}
+
+#workspaces button.empty {
+	border: 0px;
+
+	padding-right: 0px;
+}
+
+#workspaces button.visible {
+	background-color: rgba(54, 58, 79, 0.9);
+
+	border: 2px solid @overlay0;
+
+	color: @blue;
+}
+
+#workspaces button.active {
+	color: @green;
+}
+
+#workspaces button.urgent {
+	color: @red;
+}
+
+#taskbar {
+	border: 0px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+	margin-right: 4px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#window {
+	color: @pink;
+
+	margin-right: 4px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#cpu,
+#custom-cpuinfo {
+	color: @mauve;
+}
+
+#custom-gpuinfo,
+#systemd-failed-units.degraded {
+	color: @red;
+}
+
+#disk,
+#memory {
+	color: @maroon;
+}
+
+#clock {
+	color: @peach;
+}
+
+#cava,
+#custom-music,
+#systemd-failed-units {
+	color: @yellow;
 }
 
 #custom-weather {
 	color: @yellow;
-	border-radius: 0px 5px 5px 0px;
 }
 
-#cpu {
-	color: @mauve;
-	border-radius: 5px 0px 0px 5px;
+#gamemode,
+#custom-notifications,
+#custom-updates,
+#systemd-failed-units.ok,
+#tray {
+	color: @green;
 }
 
-#custom-cpuinfo {
-	color: @mauve;
-	border-radius: 0px;
-}
-
-#custom-gpuinfo {
-	color: @pink;
-	border-radius: 0px;
-}
-
-#clock {
-	color: @maroon;
-	border-radius: 5px;
-	margin-left: 8px;
-	margin-right: 8px;
+#network {
+	color: @teal;
 }
 
 #bluetooth,
 #custom-brightness {
 	color: @teal;
-	border-radius: 0px;
 }
 
-#memory {
-	color: @red;
-}
-
-#disk {
-	color: @red;
-	margin-left: -8px;
-	border-radius: 0px 5px 5px 0px;
-}
-
-#network {
-	color: @teal;
-	border-radius: 5px 0px 0px 5px;
-}
-
+#privacy,
 #pulseaudio,
 #pulseaudio.microphone {
 	color: @sky;
-	border-radius: 0px;
 }
 
 #custom-eyes,
 #idle_inhibitor,
-#privacy {
+#language {
 	color: @sapphire;
-	border-radius: 0px;
-}
-
-#cava {
-	color: @peach;
-	border-radius: 0px;
-}
-
-#custom-music {
-	color: @peach;
-	border-radius: 5px 0px 0px 5px;
 }
 
 #custom-lock {
-	border-radius: 0px;
 	color: @blue;
 }
 
 #custom-power {
 	color: @lavender;
-	margin-right: 8px;
-	border-radius: 0px 5px 5px 0px;
-}
-
-#systemd-failed-units {
-	color: @peach;
-	margin-left: 8px;
-	margin-right: 8px;
-	border-radius: 5px;
-}
-
-#systemd-failed-units.ok {
-	color: @green;
-}
-
-#systemd-failed-units.degraded {
-	color: @red;
-}
-
-#gamemode,
-#custom-updates {
-	color: @green;
-	margin-left: 8px;
-	margin-right: 8px;
-	border-radius: 5px;
-}
-
-#tray {
-	border-radius: 5px 0px 0px 5px;
-}
-
-#custom-notifications {
-	color: @green;
-	margin-right: 8px;
-	border-radius: 0px 5px 5px 0px;
 }

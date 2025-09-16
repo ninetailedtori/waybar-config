@@ -9,7 +9,6 @@
 {
 	"exclusive": true,
 	"gtk-layer-shell": true,
-	"height": 54,
 	"icon-size": 18,
 	"icon-spacing": 10,
 	"ipc": true,
@@ -19,7 +18,7 @@
 	"position": "bottom",
 	"reload_style_on_change": true,
 
-	"modules-left": ["sway/workspaces", "user", "wlr/taskbar", "sway/window"],
+	"modules-left": ["user", "sway/workspaces", "wlr/taskbar", "sway/window"],
 	"modules-center": [
 		"cpu",
 		"custom/cpuinfo",
@@ -247,35 +246,40 @@
 		"on-click": "kitty sh -c \"yay --noconfirm\""
 	},
 	"custom/weather": {
-        "format": "{}°",
-        "tooltip": true,
-        "interval": 1800,
-        "exec": "wttrbar",
-        "return-type": "json"
-    },
-    "disk": {
-        "format-zero": "",
-        "format-quarter": "",
-        "format-half": "",
-        "format-threequarter": "",
-        "format-critical": " ",
-//      "format-icons": ["", "", "", "", " "],
-        "interval": 30,
-        "path": "/",
-        "states": {
-            "zero": 0,
-            "quarter": 25,
-            "half": 50,
-            "threequarter": 75,
-            "critical": 95
-        },
-        "tooltip": true,
-        "tooltip-format": "{path}: {percentage_used}%\n{used}/{total}GB used\n{free} GB free.",
-        "unit": "GiB"
-    },
+		"format": "{}°",
+		"tooltip": true,
+		"interval": 1800,
+		"exec": "wttrbar",
+		"return-type": "json"
+	},
+	"disk": {
+		"format-zero": "",
+		"format-quarter": "",
+		"format-half": "",
+		"format-threequarter": "",
+		"format-critical": " ",
+		//      "format-icons": ["", "", "", "", " "],
+		"interval": 30,
+		"path": "/",
+		"states": {
+			"zero": 0,
+			"quarter": 25,
+			"half": 50,
+			"threequarter": 75,
+			"critical": 95
+		},
+		"tooltip": true,
+		"tooltip-format": "{path}: {percentage_used}%\n{used}/{total}GB used\n{free} GB free.",
+		"unit": "GiB"
+	},
 	"gamemode": {
+		"format": "{glyph}",
+		"format-alt": "{count} {glyph}",
 		"glyph": "",
-		"use-icon": true
+		"hide-not-running": true,
+		"tooltip": true,
+		"tooltip-format": "Games running: {count}",
+		"use-icon": false
 	},
 	"sway/language": {
 		"format": "{short}",
@@ -309,7 +313,7 @@
 			"class<micro>": "󰷈 ",
 			"class<steam>": "󰓓 ",
 			"class<vesktop>": " ",
-            "title<.*youtube.*>": "󰗃 ",
+			"title<.*youtube.*>": "󰗃 ",
 			"class<dev.zed.Zed-Dev>": "󰬇 ",
 			"class<zen>": "󰈹 ",
 			"class<zen-twilight>": "󰈹 "
@@ -391,9 +395,9 @@
 	"systemd-failed-units": {
 		"hide-on-ok": true,
 		"format": "✗ {nr_failed} ({overall_state})",
-//		"format-ok": "✓ ({overall_state})",
-//		"tooltip": true,
-//		"tooltip-format": "Failed system units: {nr_failed_system} ({systemd_state})\nFailed user units: {nr_failed_user} ({user_state})",
+		//		"format-ok": "✓ ({overall_state})",
+		//		"tooltip": true,
+		//		"tooltip-format": "Failed system units: {nr_failed_system} ({systemd_state})\nFailed user units: {nr_failed_user} ({user_state})",
 		"system": true,
 		"user": true
 	},

@@ -11,7 +11,6 @@
 {
 	"exclusive": true,
 	"gtk-layer-shell": true,
-	"height": 54,
 	"icon-size": 18,
 	"icon-spacing": 10,
 	"ipc": true,
@@ -23,7 +22,7 @@
 	"reload_style_on_change": true,
 	"start-hidden": true,
 
-	"modules-left": ["sway/workspaces", "user", "wlr/taskbar", "sway/window"],
+	"modules-left": ["user", "sway/workspaces", "wlr/taskbar", "sway/window"],
 	"modules-center": [
 		"cpu",
 		"custom/cpuinfo",
@@ -31,7 +30,7 @@
 		"memory",
 		"clock",
 		"custom/music",
-		//"cava",
+		"cava",
 		"custom/weather"
 	],
 	"modules-right": [
@@ -225,15 +224,20 @@
 		"on-click": "kitty sh -c \"yay --noconfirm\""
 	},
 	"gamemode": {
+		"format": "{glyph}",
+		"format-alt": "{count} {glyph}",
 		"glyph": "",
-		"use-icon": true
+		"hide-not-running": true,
+		"tooltip": true,
+		"tooltip-format": "Games running: {count}",
+		"use-icon": false
 	},
 	"custom/weather": {
-	    "exec": "get_weather.sh London",
-	    "return-type": "json",
-	    "format": "{}",
-	    "tooltip": true,
-	    "interval": 300
+		"exec": "get_weather.sh London",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": true,
+		"interval": 300
 	},
 	"sway/language": {
 		"format": "{short}",
@@ -243,7 +247,7 @@
 	"sway/window": {
 		"format": "  {app_id} - {title}",
 		"separate-outputs": true,
-		"max-length": 30,
+		"max-length": 30
 	},
 	"sway/workspaces": {
 		"format": "{icon}",
