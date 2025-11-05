@@ -164,19 +164,30 @@
 		"format": " "
 	},
 	"custom/music": {
-		"format": "{icon}{text}",
+		"format": "{}",
+		"tooltip": true,
+		"tooltip-format": "{}",
 		"return-type": "json",
-		"format-icons": {
-			"Playing": " ",
-			"Paused": " "
-		},
-		"exec-if": "which playerctl",
-		"exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
 		"on-click": "playerctl play-pause",
 		"on-scroll-up": "playerctl volume 0.1+",
 		"on-scroll-down": "playerctl volume 0.1-",
-		"max-length": 30
+		"exec-on-event": true,
+		"exec": "waybar-module-music --marquee --artist-width=10 --title-width=10"
 	},
+	// "custom/music": {
+	// 	"format": "{icon}{text}",
+	// 	"return-type": "json",
+	// 	"format-icons": {
+	// 		"Playing": " ",
+	// 		"Paused": " "
+	// 	},
+	// 	"exec-if": "which playerctl",
+	// 	"exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+	// 	"on-click": "playerctl play-pause",
+	// 	"on-scroll-up": "playerctl volume 0.1+",
+	// 	"on-scroll-down": "playerctl volume 0.1-",
+	// 	"max-length": 30
+	// },
 	"custom/notifications": {
 		"format": "{} {icon}",
 		"format-icons": {

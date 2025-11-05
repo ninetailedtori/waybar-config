@@ -55,7 +55,6 @@ tooltip {
 #custom-brightness,
 #custom-gpuinfo,
 #custom-lock,
-#idle_inhibitor,
 #language,
 #memory,
 #pulseaudio,
@@ -109,6 +108,7 @@ tooltip {
 #custom-notifications,
 #custom-power,
 #custom-weather,
+#idle_inhibitor,
 #disk {
 	background-color: rgba(54, 58, 79, 0.95);
 
@@ -138,7 +138,7 @@ tooltip {
 #workspaces {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	margin-left: 4px;
+	margin-left: 8px;
 	margin-right: 4px;
 }
 
@@ -222,10 +222,7 @@ tooltip {
 
 #cava,
 #custom-music,
-#systemd-failed-units {
-	color: @yellow;
-}
-
+#systemd-failed-units,
 #custom-weather {
 	color: @yellow;
 }
@@ -238,32 +235,25 @@ tooltip {
 	color: @green;
 }
 
+#bluetooth,
+#custom-brightness,
 #network {
 	color: @teal;
 }
 
-#bluetooth,
-#custom-brightness {
-	color: @teal;
-}
-
-#privacy,
 #pulseaudio,
-#pulseaudio.microphone {
+#pulseaudio.microphone,
+#privacy {
 	color: @sky;
 }
 
-#custom-eyes,
-#idle_inhibitor,
+#custom-lock,
 #language {
 	color: @sapphire;
 }
 
-#custom-lock {
-	color: @blue;
-}
-
-#custom-power {
+#custom-power,
+#idle-inhibitor {
 	color: @lavender;
 	margin-right: 8px;
 }
