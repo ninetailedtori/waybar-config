@@ -55,7 +55,6 @@ tooltip {
 #custom-brightness,
 #custom-gpuinfo,
 #custom-lock,
-#idle_inhibitor,
 #language,
 #memory,
 #pulseaudio,
@@ -109,6 +108,7 @@ tooltip {
 #custom-notifications,
 #custom-power,
 #custom-weather,
+#idle_inhibitor,
 #disk {
 	background-color: rgba(54, 58, 79, 0.95);
 
