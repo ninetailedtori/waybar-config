@@ -253,7 +253,7 @@ tooltip {
 }
 
 #custom-power,
-#idle-inhibitor {
+#idle_inhibitor {
 	color: @lavender;
 	margin-right: 8px;
 }
