@@ -47,8 +47,8 @@
 			"cava_config": "$HOME/.config/cava/config"
 		},
 		"clock": {
-			"format": "  {:%I:%M %p}",
-			"format-alt": "  {:%R 󰃭 %d·%m·%y}",
+			"format": "  {:%r}",
+			"format-alt": "  {:%r 󰃭 %a %d %B, %Y}",
 			"tooltip-format": "<span>{calendar}</span>",
 			"calendar": {
 				"mode": "month",
@@ -301,7 +301,7 @@
 			"on-click": "blueman-manager"
 		},
 		"clock": {
-			"format": "  {:%R 󰃭 %d·%m·%y}",
+			"format": "  {:%r 󰃭 %a %d %B, %Y}",
 			"tooltip-format": "<span>{calendar}</span>",
 			"calendar": {
 				"mode": "month",
