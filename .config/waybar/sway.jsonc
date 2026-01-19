@@ -1,11 +1,8 @@
-// This is my current sway config! I like this most :]
-// Below is the .config/sway/config snippet for this bar to support IPC.
+// This is my current sway config! I like this most :] Below is the
+// .config/sway/config snippet for this bar to support IPC.
 //
-//bar {
-//    swaybar_command "/usr/bin/waybar -c /home/madeline/.config/waybar/sway.jsonc"
-//    position bottom
-//    mode dock
-//}
+//bar { swaybar_command "/usr/bin/waybar -c
+//    /home/madeline/.config/waybar/sway.jsonc" position bottom mode dock }
 {
 	"exclusive": true,
 	"gtk-layer-shell": true,
@@ -61,20 +58,7 @@
 		"on-click": "blueman-manager"
 	},
 	"cava": {
-		"framerate": 60,
-		"autosens": 1,
-		"bars": 16,
-		"method": "pipewire",
-		"source": "auto",
-		"stereo": "false",
-		"monstercat": false,
-		"waves": false,
-		"input_delay": 2,
-		"bar_delimiter": 0,
-		"hide_on_silence": false,
-		"sleep_timer": 5,
-		"noise_reduction": 0.5,
-		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+		"cava_config": "$HOME/.config/cava/config"
 	},
 	"clock": {
 		"format": "  {:%I:%M %p}",
@@ -158,19 +142,14 @@
 		"on-click-right": "echo 'max' > /tmp/waybar-module-ddcutil-rx",
 		"tooltip": false
 	},
-	// "custom/brightness": {
-	// 	"format": "<span size='11000'>{icon}</span> {percentage}%",
-	// 	"format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"],
-	// 	"return-type": "json",
-	// 	"exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
-	// 	"on-scroll-up": "ddcutil --noverify setvcp 10 + 10",
-	// 	"on-scroll-down": "ddcutil --noverify setvcp 10 - 10",
-	// 	"on-click": "ddcui",
-	// 	"on-click-middle": "ddcutil --noverify setvcp 10 0",
-	// 	"on-click-right": "ddcutil --noverify setvcp 10 100",
-	// 	"signal": 5,
-	// 	"tooltip": false
-	// },
+	// "custom/brightness": { "format": "<span size='11000'>{icon}</span>
+	//  {percentage}%", "format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"], "return-type":
+	//  "json", "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+'
+	//  | { read x; echo '{\"percentage\":'${x}'}'; }", "on-scroll-up": "ddcutil
+	//  --noverify setvcp 10 + 10", "on-scroll-down": "ddcutil --noverify setvcp
+	//  10 - 10", "on-click": "ddcui", "on-click-middle": "ddcutil --noverify
+	//  setvcp 10 0", "on-click-right": "ddcutil --noverify setvcp 10 100",
+	//  "signal": 5, "tooltip": false },
 	"custom/lock": {
 		"tooltip-format": "Lock my PC!",
 		"on-click": "pidof swaylock || swaylock & disown",
@@ -185,20 +164,14 @@
 		"exec-on-event": true,
 		"exec": "waybar-module-music --marquee --artist-width=10 --title-width=10"
 	},
-	//"custom/music": {
-	//	"format": "{icon}{text}",
-	//	"return-type": "json",
-	//	"format-icons": {
-	//		"Playing": " ",
-	//		"Paused": " "
-	//	},
-	//	"exec-if": "which playerctl",
-	//	"exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-	//	"on-click": "playerctl play-pause",
-	//	"on-scroll-up": "playerctl volume 0.1+",
-	//	"on-scroll-down": "playerctl volume 0.1-",
-	//	"max-length": 30
-	//},
+	//"custom/music": { "format": "{icon}{text}", "return-type": "json",
+	//  "format-icons": { "Playing": " ", "Paused": " " }, "exec-if": "which
+	//  playerctl", "exec": "playerctl -a metadata --format '{\"text\":
+	//  \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\":
+	//      \"{{playerName}} : {{markup_escape(title)}}\", \"alt\":
+	//      \"{{status}}\", \"class\": \"{{status}}\"}' -F", "on-click":
+	//  "playerctl play-pause", "on-scroll-up": "playerctl volume 0.1+",
+	//  "on-scroll-down": "playerctl volume 0.1-", "max-length": 30 },
 	"custom/notifications": {
 		"format": "{} {icon}",
 		"format-icons": {
@@ -395,9 +368,10 @@
 	"systemd-failed-units": {
 		"hide-on-ok": true,
 		"format": "✗ {nr_failed} ({overall_state})",
-		//		"format-ok": "✓ ({overall_state})",
-		//		"tooltip": true,
-		//		"tooltip-format": "Failed system units: {nr_failed_system} ({systemd_state})\nFailed user units: {nr_failed_user} ({user_state})",
+		//		"format-ok": "✓ ({overall_state})", "tooltip": true,
+		//		"tooltip-format": "Failed system units: {nr_failed_system}
+		//		({systemd_state})\nFailed user units: {nr_failed_user}
+		//		({user_state})",
 		"system": true,
 		"user": true
 	},
@@ -425,27 +399,13 @@
 		"sort-by-app-id": true
 	}
 }
-// "custom/pacman": {
-// 	"format": "󰮯 {}",
-// 	"interval": 3600, // every hour
-// 	"exec": "$(($(checkupdates | wc -l) + $(yay -Qua | wc -l)))", // # of updates
-// 	"exec-if": "exit 0", // always run; consider advanced run conditions
-// 	"on-click": "yay -Syu --devel --noconfirm; pkill -SIGRTMIN+8 waybar", // update system
-// 	"signal": 8
-// },
+// "custom/pacman": { "format": "󰮯 {}", "interval": 3600, // every hour "exec":
+//  "$(($(checkupdates | wc -l) + $(yay -Qua | wc -l)))", // # of updates
+//  "exec-if": "exit 0", // always run; consider advanced run conditions
+//  "on-click": "yay -Syu --devel --noconfirm; pkill -SIGRTMIN+8 waybar", //
+//  update system "signal": 8 },
 //
-// "mpris": {
-// 	"format": "DEFAULT: {player_icon} {dynamic}",
-// 	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
-// 	"player-icons": {
-// 		"default": "",
-// 		"mpv": "",
-// 		"dopamine": "",
-// 		"goodvibes": "󰐹",
-// 		"firefox": "󰈹"
-// 	},
-// 	"status-icons": {
-// 		"paused": ""
-// 	}
-// 	// "ignored-players": ["firefox"]
-// },
+// "mpris": { "format": "DEFAULT: {player_icon} {dynamic}", "format-paused":
+//  "DEFAULT: {status_icon} <i>{dynamic}</i>", "player-icons": { "default": "",
+//  "mpv": "", "dopamine": "", "goodvibes": "󰐹", "firefox": "󰈹" },
+//  "status-icons": { "paused": "" } // "ignored-players": ["firefox"] },

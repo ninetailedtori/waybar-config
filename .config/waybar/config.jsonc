@@ -43,5 +43,5 @@
     "custom/yubikey": {
         "exec": "waybar-module-yubikey.sh",
         "return-type": "json"
-    },
+    }
 }

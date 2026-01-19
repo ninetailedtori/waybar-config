@@ -1,14 +1,9 @@
-// WIPWIPWIPWIPWIP
-// This is a sway.jsonc config with IPC support for auto-hiding your waybar!
-// The .config/sway/config snippets to support IPC is as such.
+// WIPWIPWIPWIPWIP This is a sway.jsonc config with IPC support for auto-hiding
+// your waybar!  The .config/sway/config snippets to support IPC is as such.
 //
-//bar {
-//    swaybar_command "/usr/bin/waybar -c /home/madeline/.config/waybar/sway-hide.jsonc"
-//    position top
-//    hidden_state hide
-//    mode hide
-//    modifier Mod4
-//}
+//bar { swaybar_command "/usr/bin/waybar -c
+//    /home/madeline/.config/waybar/sway-hide.jsonc" position top hidden_state
+//    hide mode hide modifier Mod4 }
 {
 	"exclusive": true,
 	"gtk-layer-shell": true,
@@ -62,20 +57,7 @@
 		"on-click": "blueman-manager"
 	},
 	"cava": {
-		"framerate": 60,
-		"autosens": 1,
-		"bars": 16,
-		"method": "pipewire",
-		"source": "auto",
-		"stereo": "false",
-		"monstercat": false,
-		"waves": false,
-		"input_delay": 2,
-		"bar_delimiter": 0,
-		"hide_on_silence": false,
-		"sleep_timer": 5,
-		"noise_reduction": 0.5,
-		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+		"cava_config": "$HOME/.config/cava/config"
 	},
 	"clock": {
 		"format": "  {:%I:%M %p}",
@@ -173,20 +155,14 @@
 		"exec-on-event": true,
 		"exec": "waybar-module-music --marquee --artist-width=10 --title-width=10"
 	},
-	// "custom/music": {
-	// 	"format": "{icon}{text}",
-	// 	"return-type": "json",
-	// 	"format-icons": {
-	// 		"Playing": " ",
-	// 		"Paused": " "
-	// 	},
-	// 	"exec-if": "which playerctl",
-	// 	"exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-	// 	"on-click": "playerctl play-pause",
-	// 	"on-scroll-up": "playerctl volume 0.1+",
-	// 	"on-scroll-down": "playerctl volume 0.1-",
-	// 	"max-length": 30
-	// },
+	// "custom/music": { "format": "{icon}{text}", "return-type": "json",
+	//  "format-icons": { "Playing": " ", "Paused": " " }, "exec-if": "which
+	//  playerctl", "exec": "playerctl -a metadata --format '{\"text\":
+	//  \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\":
+	//      \"{{playerName}} : {{markup_escape(title)}}\", \"alt\":
+	//      \"{{status}}\", \"class\": \"{{status}}\"}' -F", "on-click":
+	//  "playerctl play-pause", "on-scroll-up": "playerctl volume 0.1+",
+	//  "on-scroll-down": "playerctl volume 0.1-", "max-length": 30 },
 	"custom/notifications": {
 		"format": "{} {icon}",
 		"format-icons": {
@@ -388,27 +364,13 @@
 		"sort-by-app-id": true
 	}
 }
-// "custom/pacman": {
-// 	"format": "󰮯 {}",
-// 	"interval": 3600, // every hour
-// 	"exec": "$(($(checkupdates | wc -l) + $(yay -Qua | wc -l)))", // # of updates
-// 	"exec-if": "exit 0", // always run; consider advanced run conditions
-// 	"on-click": "yay -Syu --devel --noconfirm; pkill -SIGRTMIN+8 waybar", // update system
-// 	"signal": 8
-// },
+// "custom/pacman": { "format": "󰮯 {}", "interval": 3600, // every hour "exec":
+//  "$(($(checkupdates | wc -l) + $(yay -Qua | wc -l)))", // # of updates
+//  "exec-if": "exit 0", // always run; consider advanced run conditions
+//  "on-click": "yay -Syu --devel --noconfirm; pkill -SIGRTMIN+8 waybar", //
+//  update system "signal": 8 },
 //
-// "mpris": {
-// 	"format": "DEFAULT: {player_icon} {dynamic}",
-// 	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
-// 	"player-icons": {
-// 		"default": "",
-// 		"mpv": "",
-// 		"dopamine": "",
-// 		"goodvibes": "󰐹",
-// 		"firefox": "󰈹"
-// 	},
-// 	"status-icons": {
-// 		"paused": ""
-// 	}
-// 	// "ignored-players": ["firefox"]
-// },
+// "mpris": { "format": "DEFAULT: {player_icon} {dynamic}", "format-paused":
+//  "DEFAULT: {status_icon} <i>{dynamic}</i>", "player-icons": { "default": "",
+//  "mpv": "", "dopamine": "", "goodvibes": "󰐹", "firefox": "󰈹" },
+//  "status-icons": { "paused": "" } // "ignored-players": ["firefox"] },
