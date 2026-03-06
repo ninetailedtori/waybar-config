@@ -73,7 +73,7 @@
         "custom/brightness": {
             "format": "{icon} {percentage}%",
             "format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"],
-            "exec": "~/.local/share/bin/waybar-module-ddcutil.sh",
+            "exec": "$HOME/.local/share/bin/waybar-module-ddcutil.sh",
             "return-type": "json",
             "on-scroll-up": "echo '+' > /tmp/waybar-module-ddcutil-rx",
             "on-scroll-down": "echo '-' > /tmp/waybar-module-ddcutil-rx",
@@ -93,7 +93,7 @@
         //  "signal": 5, "tooltip": false },
         "custom/lock": {
             "tooltip-format": "Lock my PC!",
-            "on-click": "pidof hyprlock || hyprlock & disown",
+            "on-click": "pidof swaylock || swaylock & disown",
             "format": ""
         },
         "custom/music": {
@@ -118,7 +118,7 @@
         //  "playerctl volume 0.1-", "max-length": 30 },
         "custom/power": {
             "tooltip-format": "Power Menu",
-            "on-click": "wlogout -b 3 -l $HOME/.config/wlogout/hypr -c $HOME/.config/wlogout/style.css & disown",
+            "on-click": "wleave -b 3 -l $HOME/.config/wleave/sway -c $HOME/.config/wleave/style.css & disown",
             "format": "󰐥 "
         },
         "custom/weather": {
@@ -330,7 +330,7 @@
             "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
         },
         "custom/cpuinfo": {
-            "exec": "NO_EMOJI=1 cpuinfo.sh",
+            "exec": "NO_EMOJI=1 $HOME/.local/share/bin/cpuinfo.sh",
             "return-type": "json",
             "format": "{}",
             "restart-interval": 5,
@@ -338,7 +338,7 @@
             "max-length": 1000
         },
         "custom/gpuinfo#amd": {
-            "exec": "NO_EMOJI=1 gpuinfo.sh --use amd ",
+            "exec": "NO_EMOJI=1 $HOME/.local/share/bin/gpuinfo.sh --use amd ",
             "return-type": "json",
             "format": "{}",
             "interval": 5,
@@ -346,7 +346,7 @@
             "max-length": 1000
         },
         "custom/gpuinfo#intel": {
-            "exec": "NO_EMOJI=1 gpuinfo.sh --use intel ",
+            "exec": "NO_EMOJI=1 $HOME/.local/share/bin/gpuinfo.sh --use intel ",
             "return-type": "json",
             "format": "{}",
             "interval": 5,
@@ -354,7 +354,7 @@
             "max-length": 1000
         },
         "custom/gpuinfo#nvidia": {
-            "exec": "NO_EMOJI=1 gpuinfo.sh --use nvidia ",
+            "exec": "NO_EMOJI=1 $HOME/.local/share/bin/gpuinfo.sh --use nvidia ",
             "return-type": "json",
             "format": "{}",
             "interval": 5,
@@ -362,18 +362,18 @@
             "max-length": 1000
         },
         "custom/gpuinfo": {
-            "exec": "NO_EMOJI=1 gpuinfo.sh",
+            "exec": "NO_EMOJI=1 $HOME/.local/share/bin/gpuinfo.sh",
             "return-type": "json",
             "format": "{}",
             "interval": 5,
             "tooltip": true,
             "max-length": 1000,
-            "on-click": "gpuinfo.sh --toggle"
+            "on-click": "$HOME/.local/share/bin/gpuinfo.sh --toggle"
         },
         "custom/brightness": {
             "format": "{icon} {percentage}%",
             "format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"],
-            "exec": "~/.local/share/bin/waybar-module-ddcutil.sh",
+            "exec": "$HOME/.local/share/bin/waybar-module-ddcutil.sh",
             "return-type": "json",
             "on-scroll-up": "echo '+' > /tmp/waybar-module-ddcutil-rx",
             "on-scroll-down": "echo '-' > /tmp/waybar-module-ddcutil-rx",
@@ -493,16 +493,6 @@
             "tooltip": true,
             "tooltip-format": "Games running: {count}",
             "use-icon": false
-        },
-        "custom/hyprshade": {
-            "exec": "hyprshade current",
-            "exec-if": "which hyprshade",
-            "format": "󰘷 ",
-            "restart-interval": 5,
-            "on-click": "hyprshade auto",
-            "on-click-right": "hyprshade on vibrance",
-            "on-click-middle": "hyprshade toggle",
-            "tooltip-format": "󰘷 hyprshade: {}"
         },
         "sway/language": {
             "format": "{short}",
