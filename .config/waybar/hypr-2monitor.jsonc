@@ -305,17 +305,17 @@
         "modules-right": [
             "systemd-failed-units",
             "custom/updates",
-            "gamemode",
+            // "gamemode",
             "tray",
             "custom/notifications",
             "network",
             "bluetooth",
-            //"custom/brightness",
+            // "custom/brightness",
             "pulseaudio",
             "pulseaudio#microphone",
-            "privacy",
-            "hyprland/language",
-            "idle_inhibitor"
+            "privacy"//,
+            // "hyprland/language",
+            // "idle_inhibitor"
         ],
         "bluetooth": {
             "format": "󰂯 {status}",
