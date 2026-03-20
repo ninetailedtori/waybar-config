@@ -290,14 +290,17 @@
         "passthrough": false,
         "position": "bottom",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "hyprland/window"],
-        // wlr/taskbar is now included in hyprland/workspaces.
-        "modules-center": [
+        "modules-left": [
             "cpu",
             "custom/cpuinfo",
             "custom/gpuinfo",
             "memory",
             "disk",
+            "hyprland/workspaces",
+            "hyprland/window"
+        ],
+        // wlr/taskbar is now included in hyprland/workspaces.
+        "modules-center": [
             "clock",
             "custom/music",
             "custom/weather"

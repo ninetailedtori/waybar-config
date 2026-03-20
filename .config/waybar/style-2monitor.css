@@ -54,11 +54,9 @@ tooltip {
 #custom-cpuinfo,
 #custom-brightness,
 #custom-gpuinfo,
-#custom-lock,
 #language,
 #memory,
-#pulseaudio,
-#privacy {
+#pulseaudio {
     background-color: rgba(54, 58, 79, 0.95);
 
     border-top: 2px solid @overlay0;
@@ -81,6 +79,7 @@ tooltip {
 
 /* Left-bordered modules */
 #cpu,
+#custom-lock,
 #custom-music,
 #network,
 #tray {
@@ -109,7 +108,8 @@ tooltip {
 #custom-power,
 #custom-weather,
 #idle_inhibitor,
-#disk {
+#disk,
+#privacy {
     background-color: rgba(54, 58, 79, 0.95);
 
     border-top: 2px solid @overlay0;
@@ -132,6 +132,10 @@ tooltip {
 
 #user {
     color: @rosewater;
+    margin-left: 8px;
+}
+
+#cpu {
     margin-left: 8px;
 }
 
@@ -216,6 +220,10 @@ tooltip {
     color: @maroon;
 }
 
+#disk {
+    margin-right: 0px;
+}
+
 #clock {
     color: @peach;
 }
@@ -242,18 +250,26 @@ tooltip {
 }
 
 #pulseaudio,
-#pulseaudio.microphone,
-#privacy {
+#pulseaudio.microphone {
     color: @sky;
 }
 
-#custom-lock,
-#language {
+#idle_inhibitor,
+#language,
+#privacy {
     color: @sapphire;
 }
 
-#custom-power,
-#idle_inhibitor {
+#custom-lock,
+#custom-power {
     color: @lavender;
+}
+
+#custom-lock {
+    margin-left: 0px;
+}
+
+#custom-power,
+#privacy {
     margin-right: 8px;
 }
