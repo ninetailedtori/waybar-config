@@ -1,28 +1,28 @@
 @import "macchiato.css";
 
 * {
-    font-family: JetBrainsMono Nerd Font;
-    font-weight: 800;
-    font-size: 11px;
-    min-height: 0px;
-    border-radius: 5px;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: 800;
+  font-size: 11px;
+  min-height: 0px;
+  border-radius: 5px;
 }
 
 #waybar {
-    background: rgba(36, 39, 58, 0.9);
-    color: @text;
+  background: rgba(36, 39, 58, 0.9);
+  color: @text;
 
-    border: 2px solid @overlay0;
+  border: 2px solid @overlay0;
 
-    /* 	backdrop-filter: blur(5px); */
+  /* 	backdrop-filter: blur(5px); */
 }
 
 tooltip {
-    background-color: rgba(147, 154, 183, 0.2);
+  background-color: rgba(147, 154, 183, 0.2);
 
-    color: @text;
+  color: @text;
 
-    border: 2px solid @lavender;
+  border: 2px solid @lavender;
 }
 
 /* Fully bordered modules */
@@ -33,19 +33,19 @@ tooltip {
 #gamemode,
 #user,
 #systemd-failed-units {
-    background-color: rgba(54, 58, 79, 0.95);
+  background-color: rgba(54, 58, 79, 0.95);
 
-    border: 2px solid @overlay0;
+  border: 2px solid @overlay0;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 4px;
-    margin-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
 
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Top-Bottom-bordered modules */
@@ -57,24 +57,24 @@ tooltip {
 #language,
 #memory,
 #pulseaudio {
-    background-color: rgba(54, 58, 79, 0.95);
+  background-color: rgba(54, 58, 79, 0.95);
 
-    border-top: 2px solid @overlay0;
-    border-bottom: 2px solid @overlay0;
-    border-left: 0px;
-    border-right: 0px;
+  border-top: 2px solid @overlay0;
+  border-bottom: 2px solid @overlay0;
+  border-left: 0px;
+  border-right: 0px;
 
-    border-radius: 0px;
+  border-radius: 0px;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Left-bordered modules */
@@ -83,24 +83,24 @@ tooltip {
 #custom-music,
 #network,
 #tray {
-    background-color: rgba(54, 58, 79, 0.95);
+  background-color: rgba(54, 58, 79, 0.95);
 
-    border-top: 2px solid @overlay0;
-    border-bottom: 2px solid @overlay0;
-    border-left: 2px solid @overlay0;
-    border-right: 0px;
+  border-top: 2px solid @overlay0;
+  border-bottom: 2px solid @overlay0;
+  border-left: 2px solid @overlay0;
+  border-right: 0px;
 
-    border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 4px;
-    margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 0px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Right-bordered modules */
@@ -110,129 +110,129 @@ tooltip {
 #idle_inhibitor,
 #disk,
 #privacy {
-    background-color: rgba(54, 58, 79, 0.95);
+  background-color: rgba(54, 58, 79, 0.95);
 
-    border-top: 2px solid @overlay0;
-    border-bottom: 2px solid @overlay0;
-    border-right: 2px solid @overlay0;
-    border-left: 0px;
+  border-top: 2px solid @overlay0;
+  border-bottom: 2px solid @overlay0;
+  border-right: 2px solid @overlay0;
+  border-left: 0px;
 
-    border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0px;
-    margin-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 4px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #user {
-    color: @rosewater;
-    margin-left: 8px;
+  color: @rosewater;
+  margin-left: 8px;
 }
 
 #cpu {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
 #workspaces {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 8px;
-    margin-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 4px;
 }
 
 #workspaces button {
-    color: @flamingo;
+  color: @flamingo;
 
-    margin-left: 0px;
-    margin-right: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
 
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #workspaces button:hover {
-    background-color: rgba(147, 154, 183, 0.2);
+  background-color: rgba(147, 154, 183, 0.2);
 }
 
 #workspaces button.empty {
-    border: 0px;
+  border: 0px;
 
-    padding-right: 0px;
+  padding-right: 0px;
 }
 
 #workspaces button.visible {
-    background-color: rgba(54, 58, 79, 0.9);
+  background-color: rgba(54, 58, 79, 0.9);
 
-    border: 2px solid @overlay0;
+  border: 2px solid @overlay0;
 
-    color: @blue;
+  color: @blue;
 }
 
 #workspaces button.active {
-    color: @green;
+  color: @green;
 }
 
 #workspaces button.urgent {
-    color: @red;
+  color: @red;
 }
 
 #taskbar {
-    border: 0px;
+  border: 0px;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 4px;
-    margin-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #window {
-    color: @pink;
+  color: @pink;
 
-    margin-right: 4px;
+  margin-right: 4px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #cpu,
 #custom-cpuinfo {
-    color: @mauve;
+  color: @mauve;
 }
 
 #custom-gpuinfo,
 #systemd-failed-units.degraded {
-    color: @red;
+  color: @red;
 }
 
 #disk,
 #memory {
-    color: @maroon;
+  color: @maroon;
 }
 
 #disk {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 #clock {
-    color: @peach;
+  color: @peach;
 }
 
 #cava,
 #custom-music,
 #systemd-failed-units,
 #custom-weather {
-    color: @yellow;
+  color: @yellow;
 }
 
 #gamemode,
@@ -240,36 +240,36 @@ tooltip {
 #custom-updates,
 #systemd-failed-units.ok,
 #tray {
-    color: @green;
+  color: @green;
 }
 
 #bluetooth,
 #custom-brightness,
 #network {
-    color: @teal;
+  color: @teal;
 }
 
 #pulseaudio,
 #pulseaudio.microphone {
-    color: @sky;
+  color: @sky;
 }
 
 #idle_inhibitor,
 #language,
 #privacy {
-    color: @sapphire;
+  color: @sapphire;
 }
 
 #custom-lock,
 #custom-power {
-    color: @lavender;
+  color: @lavender;
 }
 
 #custom-lock {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 #custom-power,
 #privacy {
-    margin-right: 8px;
+  margin-right: 8px;
 }

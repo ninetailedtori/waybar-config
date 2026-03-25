@@ -60,7 +60,8 @@
     },
     "cava": {
         "cava_config": "$HOME/.config/cava/config",
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+        "hide_on_silence": true,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "clock": {
         "format": "  {:%r}",

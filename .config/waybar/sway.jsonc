@@ -59,7 +59,8 @@
     },
     "cava": {
         "cava_config": "$HOME/.config/cava/config",
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+        "hide_on_silence": true,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "clock": {
         "format": "  {:%r}",
@@ -223,7 +224,7 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 1800,
-        "exec": "wttrbar",
+        "exec": "wttrbar --location='wallington-sutton' --mph --nerd --lang=en --observation-time",
         "return-type": "json"
     },
     "disk": {

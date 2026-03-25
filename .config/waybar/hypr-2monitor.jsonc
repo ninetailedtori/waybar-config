@@ -46,7 +46,9 @@
         },
         "cava": {
             "cava_config": "$HOME/.config/cava/config",
-            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+            "hide_on_silence": true,
+            "bars": 15,
+            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
         },
         "clock": {
             "format": "  {:%r}",
@@ -126,7 +128,7 @@
             "format": "{}°",
             "tooltip": true,
             "interval": 1800,
-            "exec": "wttrbar",
+            "exec": "wttrbar --location='wallington-sutton' --mph --nerd --lang=en --observation-time",
             "return-type": "json"
         },
         "hyprland/window": {
@@ -316,7 +318,7 @@
             // "custom/brightness",
             "pulseaudio",
             "pulseaudio#microphone",
-            "privacy"//,
+            "privacy" //,
             // "hyprland/language",
             // "idle_inhibitor"
         ],
@@ -397,7 +399,7 @@
             "format": "{}",
             "interval": 5,
             "tooltip": true,
-            "max-length": 1000,
+            "max-length": 1000
             // "on-click": "$HOME/.local/share/bin/gpuinfo.sh --toggle"
         },
         "custom/brightness": {
@@ -492,7 +494,7 @@
             "format": "{}°",
             "tooltip": true,
             "interval": 1800,
-            "exec": "wttrbar",
+            "exec": "wttrbar --location='wallington-sutton' --mph --nerd --lang=en --observation-time",
             "return-type": "json"
         },
         "disk": {
@@ -703,7 +705,7 @@
             "spacing": 10,
             "show-passive-items": true,
             "reverse-direction": true
-        }//,
+        } //,
         // "wlr/taskbar": {
         //     "all-outputs": false, "format": "{icon}",
         //     "icon-theme": "Tela-circle-dracula", "spacing": 0, "tooltip-format":
