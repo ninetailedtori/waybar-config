@@ -46,6 +46,7 @@
         "cava": {
             "cava_config": "$HOME/.config/cava/config",
             "hide_on_silence": true,
+            "bars": 15,
             "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
         },
         "clock": {
@@ -263,14 +264,16 @@
         "passthrough": false,
         "position": "bottom",
         "reload_style_on_change": true,
-        "modules-left": ["sway/workspaces", "wlr/taskbar", "sway/window"],
-        // wlr/taskbar is now included in sway/workspaces.
-        "modules-center": [
+        "modules-left": [
             "cpu",
             "custom/cpuinfo",
             "custom/gpuinfo",
             "memory",
             "disk",
+            "sway/workspaces",
+            "sway/window"
+        ],
+        "modules-center": [
             "clock",
             "custom/music",
             "custom/weather"
@@ -278,7 +281,7 @@
         "modules-right": [
             "systemd-failed-units",
             "custom/updates",
-            "gamemode",
+            // "gamemode",
             "tray",
             "custom/notifications",
             "network",
@@ -287,8 +290,8 @@
             "pulseaudio",
             "pulseaudio#microphone",
             "privacy",
-            "sway/language",
-            "idle_inhibitor"
+            "sway/language"//,
+            // "idle_inhibitor"
         ],
         "bluetooth": {
             "format": "󰂯 {status}",

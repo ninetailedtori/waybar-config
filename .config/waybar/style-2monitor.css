@@ -56,7 +56,8 @@ tooltip {
 #custom-gpuinfo,
 #language,
 #memory,
-#pulseaudio {
+#pulseaudio,
+#privacy {
   background-color: rgba(54, 58, 79, 0.95);
 
   border-top: 2px solid @overlay0;
@@ -109,7 +110,7 @@ tooltip {
 #custom-weather,
 #idle_inhibitor,
 #disk,
-#privacy {
+#language {
   background-color: rgba(54, 58, 79, 0.95);
 
   border-top: 2px solid @overlay0;

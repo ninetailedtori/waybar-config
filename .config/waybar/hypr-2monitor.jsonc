@@ -301,7 +301,6 @@
             "hyprland/workspaces",
             "hyprland/window"
         ],
-        // wlr/taskbar is now included in hyprland/workspaces.
         "modules-center": [
             "clock",
             "custom/music",
@@ -318,8 +317,8 @@
             // "custom/brightness",
             "pulseaudio",
             "pulseaudio#microphone",
-            "privacy" //,
-            // "hyprland/language",
+            "privacy",
+            "hyprland/language"//,
             // "idle_inhibitor"
         ],
         "bluetooth": {
