@@ -25,9 +25,6 @@
             "network",
             "bluetooth",
             //"custom/brightness",
-            "pulseaudio",
-            "pulseaudio#microphone",
-            "privacy",
             "custom/lock",
             "custom/power"
         ],
@@ -460,6 +457,7 @@
             },
             "exec-if": "which waybar-module-pacman-updates",
             "exec": "waybar-module-pacman-updates",
+            "interval": 300,
             "on-click": "kitty sh -c \"yay --noconfirm\""
         },
         "custom/weather": {

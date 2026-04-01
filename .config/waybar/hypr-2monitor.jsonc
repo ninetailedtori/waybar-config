@@ -26,9 +26,6 @@
             "network",
             "bluetooth",
             //"custom/brightness",
-            "pulseaudio",
-            "pulseaudio#microphone",
-            "privacy",
             "custom/lock",
             "custom/power"
         ],
