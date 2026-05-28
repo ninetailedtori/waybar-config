@@ -48,6 +48,7 @@
             "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
         },
         "clock": {
+            "interval": 1,
             "format": "  {:%r}",
             "format-alt": "  {:%r 󰃭 %a %d %B, %Y}",
             "tooltip-format": "<span>{calendar}</span>",
@@ -132,26 +133,6 @@
             "format": "{class} - {title}",
             "icon": false,
             "max-length": 30,
-            "rewrite": {
-                "code(.*)": "󰨞 $1",
-                "code-insiders(.*)": "󰨞 $1",
-                "codium(.*)": "󰨞 $1",
-                "discord(.*)": " $1",
-                "goofcord(.*)": " $1",
-                "firefox(.*)": " $1",
-                "howl(.*)": "󰷈 $1",
-                "kitty(.*)": " $1",
-                "librewolf(.*)": "󰈹 $1",
-                "prismlauncher(.*)": "󰍳 $1",
-                "Minecraft(.*)": "󰍳 $1",
-                "micro(.*)": "󰷈 $1",
-                "steam(.*)": "󰓓 $1",
-                "vesktop(.*)": " $1",
-                "FreeTube(.*)": "󰗃 $1",
-                "dev.zed.Zed(.*)": "󰬇 $1",
-                "zen(.*)": "󰈹 $1",
-                "zen-twilight(.*)": "󰈹 $1"
-            },
             "separate-outputs": true
         },
         "hyprland/workspaces": {
@@ -170,27 +151,27 @@
                 "DP-2": [2, 4, 6, 8, 10]
             },
             "sort-by": "number",
-            "window-rewrite-default": "",
-            "window-rewrite": {
-                "class<code>": "󰨞",
-                "class<code-insiders>": "󰨞",
-                "class<codium>": "󰨞",
-                "class<discord>": "",
-                "class<goofcord>": "",
-                "class<firefox>": "",
-                "class<howl>": "󰷈",
-                "class<kitty>": "",
-                "class<librewolf>": "󰈹",
-                "class<Minecraft>": "󰍳",
-                "class<micro>": "󰷈",
-                "class<prismlauncher>": "󰍳",
-                "class<Steam>": "󰓓",
-                "class<vesktop>": "",
-                "title<.*youtube.*>": "󰗃",
-                "class<dev.zed.Zed-Dev>": "󰬇",
-                "class<zen>": "󰈹",
-                "class<zen-twilight>": "󰈹"
-            },
+            // "window-rewrite-default": "",
+            // "window-rewrite": {
+            //     "class<code>": "󰨞",
+            //     "class<code-insiders>": "󰨞",
+            //     "class<codium>": "󰨞",
+            //     "class<discord>": "",
+            //     "class<goofcord>": "",
+            //     "class<firefox>": "",
+            //     "class<howl>": "󰷈",
+            //     "class<kitty>": "",
+            //     "class<librewolf>": "󰈹",
+            //     "class<Minecraft>": "󰍳",
+            //     "class<micro>": "󰷈",
+            //     "class<prismlauncher>": "󰍳",
+            //     "class<Steam>": "󰓓",
+            //     "class<vesktop>": "",
+            //     "title<.*youtube.*>": "󰗃",
+            //     "class<dev.zed.Zed-Dev>": "󰬇",
+            //     "class<zen>": "󰈹",
+            //     "class<zen-twilight>": "󰈹"
+            // },
             "workspace-taskbar": {
                 "enable": true,
                 "update-active-window": true,
@@ -315,7 +296,7 @@
             "pulseaudio",
             "pulseaudio#microphone",
             "privacy",
-            "hyprland/language"//,
+            "hyprland/language" //,
             // "idle_inhibitor"
         ],
         "bluetooth": {
@@ -331,6 +312,7 @@
             "on-click": "blueman-manager"
         },
         "clock": {
+            "interval": 1,
             "format": "  {:%r 󰃭 %a %d %B, %Y}",
             "tooltip-format": "<span>{calendar}</span>",
             "calendar": {
@@ -540,7 +522,7 @@
             "on-click-right": "hyprctl switchxkblayout all prev"
         },
         "hyprland/window": {
-            "format": "{class} - {title}",
+            // "format": "{class} - {title}",
             "icon": false,
             "max-length": 30,
             "rewrite": {

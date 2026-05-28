@@ -47,6 +47,7 @@
             "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
         },
         "clock": {
+            "interval": 1,
             "format": "  {:%r}",
             "format-alt": "  {:%r 󰃭 %a %d %B, %Y}",
             "tooltip-format": "<span>{calendar}</span>",
@@ -133,7 +134,7 @@
             "on-click-right": "swaymsg input type:keyboard xkb_switch_layout prev"
         },
         "sway/window": {
-            "format": "  {app_id} - {title}",
+            "format": " {app_id} - {title}",
             "separate-outputs": true,
             "max-length": 25
         },
@@ -146,24 +147,24 @@
                 "active": " ",
                 "default": " "
             },
-            "window-rewrite": {
-                "class<code>": "󰨞 ",
-                "class<code-insiders>": "󰨞 ",
-                "class<codium>": "󰨞 ",
-                "class<discord>": " ",
-                "class<goofcord>": " ",
-                "class<firefox>": " ",
-                "class<howl>": "󰷈 ",
-                "class<kitty>": " ",
-                "class<librewolf>": "󰈹 ",
-                "class<micro>": "󰷈 ",
-                "class<steam>": "󰓓 ",
-                "class<vesktop>": " ",
-                "title<.*youtube.*>": "󰗃 ",
-                "class<dev.zed.Zed-Dev>": "󰬇 ",
-                "class<zen>": "󰈹 ",
-                "class<zen-twilight>": "󰈹 "
-            },
+            // "window-rewrite": {
+            //     "code - (.*)": "󰨞 ",
+            //     "code-insiders - (.*)": "󰨞 ",
+            //     "codium - (.*)": "󰨞 ",
+            //     "discord - (.*)": " ",
+            //     "goofcord - (.*)": " ",
+            //     "firefox - (.*)": " ",
+            //     "howl - (.*)": "󰷈 ",
+            //     "kitty - (.*)": " ",
+            //     "librewolf - (.*)": "󰈹 ",
+            //     "micro - (.*)": "󰷈 ",
+            //     "steam - (.*)": "󰓓 ",
+            //     "vesktop - (.*)": " ",
+            //     "title<.*youtube.*>": "󰗃 ",
+            //     "dev.zed.Zed-Dev - (.*)": "󰬇 ",
+            //     "zen - (.*)": "󰈹 ",
+            //     "zen-twilight - (.*)": "󰈹 "
+            // },
             "sort-by-number": true
         },
         // "mpris": { "format": "DEFAULT: {player_icon} {dynamic}",
@@ -287,7 +288,7 @@
             "pulseaudio",
             "pulseaudio#microphone",
             "privacy",
-            "sway/language"//,
+            "sway/language" //,
             // "idle_inhibitor"
         ],
         "bluetooth": {
@@ -303,6 +304,7 @@
             "on-click": "blueman-manager"
         },
         "clock": {
+            "interval": 1,
             "format": "  {:%r 󰃭 %a %d %B, %Y}",
             "tooltip-format": "<span>{calendar}</span>",
             "calendar": {
@@ -457,7 +459,7 @@
             },
             "exec-if": "which waybar-module-pacman-updates",
             "exec": "waybar-module-pacman-updates",
-            "interval": 300,
+            "restart-interval": 60,
             "on-click": "kitty sh -c \"yay --noconfirm\""
         },
         "custom/weather": {
@@ -502,9 +504,22 @@
             "on-click-right": "swaymsg input type:keyboard xkb_switch_layout prev"
         },
         "sway/window": {
-            "format": "  {app_id} - {title}",
+            "format": " {app_id} - {title}",
             "separate-outputs": true,
-            "max-length": 25
+            "max-length": 30
+            // "rewrite": {
+            //     "(?:code|codium)(?:-insiders)? - (.*)": "󰨞 $1",
+            //     "(?:discord|legcord|vesktop) - (.*)": " $1",
+            //     "goofcord - (.*)": " $1",
+            //     "firefox - (.*)": " $1",
+            //     "howl - (.*)": "󰷈 $1",
+            //     "kitty - (.*)": " $1",
+            //     "librewolf - (.*)": "󰈹 $1",
+            //     "kitty - helix (.*)": "󰷈 $1",
+            //     "kitty - micro (.*)": "󰷈 $1",
+            //     "steamwebhelper - (.*)": "󰓓 $1",
+            //     "(?:freetube|materialious|youtube|youtube-music) - (.*)": "󰗃 $1"
+            // }
         },
         "sway/workspaces": {
             "format": "{icon}",
@@ -514,24 +529,6 @@
                 "urgent": " ",
                 "active": " ",
                 "default": " "
-            },
-            "window-rewrite": {
-                "class<code>": "󰨞 ",
-                "class<code-insiders>": "󰨞 ",
-                "class<codium>": "󰨞 ",
-                "class<discord>": " ",
-                "class<goofcord>": " ",
-                "class<firefox>": " ",
-                "class<howl>": "󰷈 ",
-                "class<kitty>": " ",
-                "class<librewolf>": "󰈹 ",
-                "class<micro>": "󰷈 ",
-                "class<steam>": "󰓓 ",
-                "class<vesktop>": " ",
-                "title<.*youtube.*>": "󰗃 ",
-                "class<dev.zed.Zed-Dev>": "󰬇 ",
-                "class<zen>": "󰈹 ",
-                "class<zen-twilight>": "󰈹 "
             },
             "sort-by-number": true
         },

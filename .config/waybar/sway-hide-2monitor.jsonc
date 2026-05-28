@@ -62,6 +62,7 @@
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "clock": {
+        "interval": 1,
         "format": "  {:%r}",
         "format-alt": "  {:%r 󰃭 %a %d %B, %Y}",
         "tooltip-format": "<span>{calendar}</span>",
@@ -233,7 +234,7 @@
         "on-click-right": "swaymsg input type:keyboard xkb_switch_layout prev"
     },
     "sway/window": {
-        "format": "  {app_id} - {title}",
+        "format": " {app_id} - {title}",
         "separate-outputs": true,
         "max-length": 30
     },
@@ -246,22 +247,22 @@
             "active": " ",
             "default": " "
         },
-        "window-rewrite": {
-            "title<.*youtube.*>": "󰗃 ",
-            "class<firefox>": " ",
-            "class<zen>": "󰈹 ",
-            "class<zen-twilight>": "󰈹 ",
-            "class<librewolf>": "󰈹 ",
-            "class<kitty>": " ",
-            "class<code>": "󰨞 ",
-            "class<code-insiders>": "󰨞 ",
-            "class<howl>": " ",
-            "class<dev.zed.Zed-Dev>": "󱔽 ",
-            "class<steam>": "󰓓 ",
-            "class<discord>": " ",
-            "class<goofcord>": " ",
-            "class<vesktop>": " "
-        },
+        // "window-rewrite": {
+        //     "title<.*youtube.*>": "󰗃 ",
+        //     "class<firefox>": " ",
+        //     "class<zen>": "󰈹 ",
+        //     "class<zen-twilight>": "󰈹 ",
+        //     "class<librewolf>": "󰈹 ",
+        //     "class<kitty>": " ",
+        //     "class<code>": "󰨞 ",
+        //     "class<code-insiders>": "󰨞 ",
+        //     "class<howl>": " ",
+        //     "class<dev.zed.Zed-Dev>": "󱔽 ",
+        //     "class<steam>": "󰓓 ",
+        //     "class<discord>": " ",
+        //     "class<goofcord>": " ",
+        //     "class<vesktop>": " "
+        // },
         "sort-by-number": true
     },
     "idle_inhibitor": {
